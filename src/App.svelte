@@ -1,7 +1,6 @@
 <script lang="ts">
   import Hls from 'hls.js';
   import { onMount } from 'svelte';
-  import map from './map.png';
 
   let northup136: HTMLVideoElement;
   let spring136: HTMLVideoElement;
