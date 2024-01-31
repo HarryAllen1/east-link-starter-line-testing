@@ -43,8 +43,8 @@
   <!-- svelte-ignore a11y-media-has-caption -->
   <video muted autoplay bind:this={northup136}></video>
   <video muted autoplay bind:this={spring136}></video>
-  <video muted autoplay bind:this={spring132}></video>
   <video muted autoplay bind:this={se8112}></video>
+  <video muted autoplay bind:this={spring132}></video>
 </div>
 
 <style>
