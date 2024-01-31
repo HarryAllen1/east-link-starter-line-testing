@@ -11,10 +11,13 @@
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = url;
     } else if (Hls.isSupported()) {
-      const hls = new Hls({});
+      const hls = new Hls();
       hls.loadSource(url);
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+      setInterval(() => {
+        hls.loadSource(url);
+      }, 60 * 1000);
     }
   };
 
