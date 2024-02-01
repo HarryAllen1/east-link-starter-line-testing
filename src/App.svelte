@@ -15,6 +15,7 @@
       hls.loadSource(url);
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+      hls.on(Hls.Events.ERROR, () => hls.loadSource(url));
       setInterval(
         () => {
           hls.loadSource(url);
