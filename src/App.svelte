@@ -6,6 +6,7 @@
   let spring136: HTMLVideoElement;
   let spring132: HTMLVideoElement;
   let se8112: HTMLVideoElement;
+  let dts: HTMLVideoElement;
 
   const initStream = (url: string, video: HTMLVideoElement) => {
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -42,6 +43,10 @@
       'https://trafficcams.bellevuewa.gov/traffic-edge/CCTV089L.stream/chunklist_w830562892.m3u8',
       se8112
     );
+    initStream(
+      'https://trafficcams.bellevuewa.gov/traffic-edge/CCTV107L.stream/chunklist_w1370469522.m3u8',
+      dts
+    );
   });
 </script>
 
@@ -51,6 +56,7 @@
   <video muted autoplay bind:this={spring136}></video>
   <video muted autoplay bind:this={se8112}></video>
   <video muted autoplay bind:this={spring132}></video>
+  <video muted autoplay bind:this={dts}></video>
 </div>
 
 <style>
